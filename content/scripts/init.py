@@ -3,9 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.io import wavfile
 from IPython.display import Audio
-import sys
 import math
-import time
 
 # local function
 def get_sine(f, sampling_rate = 48000, duration_in_sec = 1, phase = 0):
