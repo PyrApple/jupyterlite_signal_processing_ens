@@ -1,0 +1,10 @@
+- diagramme de phase
+
+# manipulation à connaître
+
+- formules euler (cf td where you have to find all of them)
+- retrouver tf d'un dirac, tf inverse
+- retrouver tf d'un dirac retardé
+- retrouver tf inverse d'un dirac retardé en fréquence
+- retrouver la TF d'une porte, tf inverse
+- retrouver la tf d'une dérivée (+ récursif)
