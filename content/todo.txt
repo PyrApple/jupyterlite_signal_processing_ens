@@ -1,4 +1,9 @@
 - diagramme de phase
+- projection c'est un produit scalaire
+
+- déconvolution
+
+- show echogram of ir when first used 
 
 # manipulation à connaître
 

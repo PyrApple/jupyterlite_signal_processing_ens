@@ -1,0 +1,1 @@
+- to reset workspace, add at url' end: ?reset
