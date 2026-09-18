@@ -1,7 +1,7 @@
 # import
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.io import wavfile
+import scipy
 from IPython.display import Audio
 import math
 
@@ -14,7 +14,7 @@ def playsound(audio, fs):
     display(Audio(audio, rate=fs))
 
 def wavread(filepath):
-    fs, audio = wavfile.read(filepath)
+    fs, audio = scipy.io.wavfile.read(filepath)
     audio = audio / np.max(np.abs(audio))
     return audio, fs
     
