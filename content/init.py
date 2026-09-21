@@ -17,7 +17,29 @@ def wavread(filepath):
     fs, audio = scipy.io.wavfile.read(filepath)
     audio = audio / np.max(np.abs(audio))
     return audio, fs
-    
+
+# not used atm
+"""
+def filter_formula(b, a):
+    terms = []
+
+    for k, gain in enumerate(b):
+        var = "x[n]" if k == 0 else f"x[n-{k}]"
+        terms.append((gain/a[0], var))
+
+    for k, gain in enumerate(a[1:], start=1):
+        terms.append((-gain/a[0], f"y[n-{k}]"))
+
+    formula = "y[n] = "
+    for i, (gain, var) in enumerate(terms):
+        if i == 0:
+            formula += f"{gain:g}.{var}"
+        else:
+            formula += f" {'+' if gain >= 0 else '-'} {abs(gain):g}.{var}"
+
+    return formula
+"""  
+
 # init locals
 fs = 48000
 
@@ -45,6 +67,7 @@ plt.rcParams.update({
 
     # Curves
     'lines.linewidth': 1,
+    'lines.markersize': 3,
 
     # Figure
     'figure.figsize': (6, 3.5),
