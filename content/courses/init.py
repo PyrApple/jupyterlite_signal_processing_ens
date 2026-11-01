@@ -10,6 +10,9 @@ def get_sine(f, sampling_rate = 48000, duration_in_sec = 1, phase = 0):
     t = np.arange(0, duration_in_sec, 1/sampling_rate)
     return np.sin(2*math.pi*f*t + phase), t
 
+def get_cos(f, sampling_rate = 48000, duration_in_sec = 1, phase = 0):
+    return( get_sine(f, sampling_rate, duration_in_sec, phase + math.pi/2) )
+
 def playsound(audio, fs):
     display(Audio(audio, rate=fs))
 
@@ -18,8 +21,6 @@ def wavread(filepath):
     audio = audio / np.max(np.abs(audio))
     return audio, fs
 
-# not used atm
-"""
 def filter_formula(b, a):
     terms = []
 
@@ -33,12 +34,11 @@ def filter_formula(b, a):
     formula = "y[n] = "
     for i, (gain, var) in enumerate(terms):
         if i == 0:
-            formula += f"{gain:g}.{var}"
+            formula += f"{gain:.2g}.{var}"
         else:
-            formula += f" {'+' if gain >= 0 else '-'} {abs(gain):g}.{var}"
+            formula += f" {'+' if gain >= 0 else '-'} {abs(gain):.2g}.{var}"
 
-    return formula
-"""  
+    return formula 
 
 # init locals
 fs = 48000
