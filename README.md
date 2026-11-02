@@ -40,3 +40,8 @@ Run these commands from the repository root. The build config selects `content/`
 rm -Rf ./dist/*
 jupyter lite build --config=jupyter_lite_config.json --output-dir=./dist/
 jupyter lite serve --config=jupyter_lite_config.json --output-dir=./dist/
+
+
+# Hidden tutorial corrections
+
+To toggle hide corrections, comment extra_ignore_contents line in jupyter_lite_config.json 

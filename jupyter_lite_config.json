@@ -8,6 +8,6 @@
     ]
   },
   "ContentsManager": {
-    "allow_hidden": false
+    "allow_hidden": true
   }
 }
