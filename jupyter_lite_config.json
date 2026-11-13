@@ -1,7 +1,7 @@
 {
   "LiteBuildConfig": {
     "extra_ignore_contents": [
-      ".*_NOT_correction\\.ipynb$"
+      ".*_hidden\\.ipynb$"
     ],
     "contents": [
       "content"
