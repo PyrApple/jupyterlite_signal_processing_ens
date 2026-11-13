@@ -37,3 +37,31 @@ audio = np.pad(audio, [delay_in_samp, 0])
 scipy.io.wavfile.write("../content/assets/drums_delayed.wav", fs, audio)
 
 #endregion
+
+#region: delayed impulse response to illustrate circular convolution
+
+# load audio 
+fs, audio = scipy.io.wavfile.read('../content/assets/ir_mono.wav')
+audio = audio / np.max(np.abs(audio))
+
+# create delayed version
+delay_in_ms = 500
+delay_in_samp = int(fs * (delay_in_ms / 1000))
+audio = np.pad(audio, [delay_in_samp, 0])
+
+# save to disk
+scipy.io.wavfile.write("../content/assets/ir_mono_delayed.wav", fs, audio)
+
+# load audio 
+fs, audio = scipy.io.wavfile.read('../content/assets/drums.wav')
+audio = audio / np.max(np.abs(audio))
+
+# create delayed version
+delay_in_ms = 1000
+delay_in_samp = int(fs * (delay_in_ms / 1000))
+audio = np.pad(audio, [delay_in_samp, 0])
+
+# save to disk
+scipy.io.wavfile.write("../content/assets/drums_delayed2.wav", fs, audio)
+
+#endregion
